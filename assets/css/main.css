@@ -3112,7 +3112,7 @@ input, select, textarea {
 
 		.spotlight.top .content, .spotlight.bottom .content {
 			left: 0;
-			padding: 5.1em 0 3.1em 0;
+			padding: 1em 0 1em 0;
 			width: 100%;
 		}
 
@@ -3620,7 +3620,7 @@ input, select, textarea {
 			}
 
 			.spotlight.bottom .content {
-				padding: 3.825em 0 2.95em 0;
+				padding: 2em 0 2em 0;
 			}
 
 			.spotlight.left .content, .spotlight.right .content {

@@ -3123,7 +3123,11 @@ input, select, textarea {
 		}
 
 		.spotlight.left .content, .spotlight.right .content {
-			height: 101%;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+
+			height: 100%;
 			padding: 6em 3em;
 			top: 0;
 			width: 28em;
@@ -3149,6 +3153,10 @@ input, select, textarea {
 
 		.spotlight.style3 .content {
 			border-color: #39c088;
+		}
+
+		.spotlight.style4 .content {
+			border-color: rgb(247, 118, 32);
 		}
 
 		.spotlight.inactive .content {
@@ -3534,8 +3542,9 @@ input, select, textarea {
 
 	#footer {
 		background: #272833;
-		padding: 6em 0;
+		padding: 3em 0;
 		text-align: center;
+		/* height: 100vh; */
 	}
 
 		#footer .icons .icon.alt {

@@ -1,0 +1,22 @@
+.flexformatting{
+  display: flex;
+  flex-direction: row;
+  padding-top: 5vh;
+  justify-content: space-between;
+
+}
+
+.left-side .right-side{
+  width: 100px;
+}
+
+.writeup{
+  font-size: 3vh;
+  width: 1000px;
+}
+
+.figuretext {
+  font-style: italic;
+  text-align: center;
+  font-size: 3vh;
+}

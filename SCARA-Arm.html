@@ -7,107 +7,118 @@
 <html>
 	
 	<head>
-		<title>MingWei's Portfolio</title>
+		<title>SCARA Arm</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/imageadjustment.css" />
 		<link rel="stylesheet" href="assets/css/scrollbar.css" />
+		<link rel="stylesheet" href="assets/css/writeup.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="shortcut icon" type="image/x-icon" href="images\mu icon.ico" />
+		<link rel="shortcut icon" href="images\icons\robotarm.ico">
+
+		<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>I'm MingWei.</h2>
-							<p>Electrical Engineering @ UCSD 2025'<br />
-							Designer by Day. Dreamer by Night.</p>
-						</header>
-						<span class="image"><img style = "margin-top: -50px" src="images/Senior Portrait.jpg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- One -->
-			<section id="one" class="spotlight style1 left">
+			<!-- Header -->
+			<section id="two" class="spotlight style1 left">
 				<span class="image fit main"> <img src="images/SCARA Arm.png"> </span>
 				<div class="content">
 					<header>
 						<h2>SCARA Arm</h2>
 						<p>A Four Axis arm with BLDC motors running Field Oriented Control.</p>
 					</header>
-					<ul class="actions">
-						<li><a href="#" class="button">Learn More ></a></li>
-					</ul>
 				</div>
-				<a href="#two" class="goto-next scrolly">Next</a>
+				<a href="#one" class="goto-next scrolly">Next</a>
 			</section>
+		
 
-			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"> <img src="images/L0ckcr4ck3r.png"> </span>
-					<div class="content">
-						<header>
-							<h2>Project l0ckcr4ck3r</h2>
-							<p>A Fully Autonomous Lock Cracking Robot. Featured on Hackaday and Arduino.com.</p>
-						</header>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More ></a></li>
-						</ul>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+			<!-- One -->
+			<div id="one" class="flexformatting">
+				<div class = left-side> 
 
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main right"><img src="images/SE3 Catapult.png"/></span>
-					<div class="content">
-						<header>
-							<h2>SE3 Catapult</h2>
-							<p>A Ratchet-Pawl catapult for Structural Engineering 3.</p>
-						</header>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More ></a></li>
-						</ul>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
-
-				<!-- Four  -->
+				</div>
+				<div class = writeup> 
+					<h2> About the project May 2021 - June 2022</h2>
+					<p> 
+						The SCARA Arm was a collaboration bewtween me and my friend Adin. I sought to hone in my mechanical designing skills whilst he wanted to learn more about Brushless motors and FOC technology. 
+					</p>
+					
+					<p>
+						Today the SCARA Arm sits inside of UCSD's Envision Makerspace, and poses as an example of what makers can do if they put their heart to it. 
+					</p>
 				
-				<section id="four" class="spotlight style4 right">
-					<span class="image main"><img src="images/PrusaLEDs.jpg"/></span>
-					<div class="content">
-						<header>
-							<h2>Reactive 3D Printer Lights</h2>
-							<p>LEDs capable of beautiful animations based on the state of the printer.</p>
-						</header>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More ></a></li>
-						</ul>
-					</div>
-					<a href="#five" class="goto-next scrolly">Next</a>
-				</section>
+					(insert image of it at envision)
 
-				<!-- five -->
-				<section id="five" class="spotlight style1 left">
-					<span class="image fit main right"><img src="images/cutawaylocks.jpg"/></span>
-					<div class="content">
-						<header>
-							<h2>CNC Milled Locks</h2>
-							<p>American locks with milled areas to reveal its' inner workings.</p>
-						</header>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More ></a></li>
-						</ul>
-					</div>
-					<a href="#footer" class="goto-next scrolly">Next</a>
-				</section>
 
+					<h2> Robot arm design selection</h2>
+					<p>
+						We had really wanted to make a robot arm but there were multiple different types to choose from. During the research phase we settled on a SCARA Style Arm. This is because the arms on
+						a generic robot arm has to fight against gravity and exert an incredible amount of torque on its joints to hold it's position. Undoubtedly, choose the correct design based on our materials
+						and tooling was the most important part as it outlined the obastacles that we would have to face later on. 
+					</p>
+					
+					<h2> Motor Design </h2>
+					<p> 
+						We went with these surprisingly cheap <a href = "https://emaxmodel.com/products/emax-gb4114-brushless-gimbal-motor-hollow-shaft-42kv-85t" target = "_blank" style = "color: white"> Emaxx 4114 gimbal motors</a> (while they were in stock) 
+						and were 8$ each. 
+					</p>
+					<p> 
+						The actual motor design has to be the best representation of the collaboration between me and Adin. We needed a housing to protect the motor controller, constrain the diametric magnet for the encoder, 
+						and provide suitable mounting points to use the motor in multiple instances in our robot arm.
+					</p>
+
+					<p> 
+						The final design is really compact and does a great job of housing the motor. It has a snap on lid which protects and gives tool free access to the pcb.
+						It also has mine and Adin's logo on it!
+					</p>
+
+					<img style = "height: 100vh;" src = "images\SCARA Arm\42KV Top Motor (1).png">
+					<img style = "height: 100vh;" src = "images\SCARA Arm\42KV Top Motor Exploded.png">
+
+					<figure class = "figuretext"> Complete Motor Housing &nbsp &nbsp | &nbsp &nbsp Exploded View of Motor Housing </figure>
+
+					<h2> Design Prototypes </h2>
+					<h3> First Version </h3> 
+					<p> 
+						At first, I strived for pure simplicity. Attaching each motor directly to each joint of the arm. This looked fine in CAD but in real life, the LEAN from the sheer weight of each motor 
+						was unbearably bad. Not only that, but the massive rotational intertia caused many other problems like shaking and slow movement.  
+					</p>
+
+					<img style = "height: 100vh;" src = "images\SCARA Arm\firstversion.png">
+					<img style = "height: 100vh;" src = "images\SCARA Arm\motorshakey.gif">
+					
+					<h3> Second Version </h3>
+					<p> I realized through an interesting belt-arrangement, the exact same robot arm could be achieved with belts. It moved the COG (center of gravity) much closer to the center of rotation and hugely decreased the rotational inertia </p>
+
+					<img style = "height: 100vh;" src = "images/SCARA Arm/second version.png">
+
+					<p> This design was good enough to get the arm moving.</p>
+
+					<video controls autoplay style = "height: 100vh">
+						<source src="images\SCARA Arm\IMG_0017.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+
+					<p> 
+						This version used fine pitched GT2 Belts, the same ones that 3D Printers use since I easily had those on hand. Unfortunately, it did not handle torque extremely well and the 3D 
+						printed pulleys were super prone to stripping.
+					</p>
+
+					
+
+				</div>
+
+				<div class = right-side> 
+
+				</div>
+
+			</div>
+			
+		</div>
 
 			<!-- Footer -->
 				<footer id="footer">

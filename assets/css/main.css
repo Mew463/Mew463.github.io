@@ -3480,7 +3480,7 @@ input, select, textarea {
 		}
 
 		#banner:after {
-			background-image: -webkit-linear-gradient(top, rgba(36, 36, 36, 0), rgba(46, 46, 46, 1)), url("images/overlay.png");;
+			background-image: -webkit-linear-gradient(top, rgba(36, 36, 36, 0.2), rgba(46, 46, 46, .9)), url("images/overlay.png");;
 			content: '';
 			display: block;
 			height: 100%;

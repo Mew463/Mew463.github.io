@@ -48,7 +48,7 @@
 					</p>
 					
 					<p>
-						Today the SCARA Arm sits inside of UCSD's Envision Makerspace, and poses as an example of what makers can do if they put their heart to it. 
+						Today the SCARA Arm sits inside of UCSD's Envision Makerspace, and poses as an example of what makers can do when they come together.
 					</p>
 				
 					(insert image of it at envision)
@@ -57,18 +57,16 @@
 					<h2> Robot arm design selection</h2>
 					<p>
 						We had really wanted to make a robot arm but there were multiple different types to choose from. During the research phase we settled on a SCARA Style Arm. This is because the arms on
-						a generic robot arm has to fight against gravity and exert an incredible amount of torque on its joints to hold it's position. Undoubtedly, choose the correct design based on our materials
+						a generic robot arm has to fight against gravity and exert an incredible amount of torque on its joints to hold it's position. Undoubtedly, choosing the correct design based on our materials
 						and tooling was the most important part as it outlined the obastacles that we would have to face later on. 
 					</p>
 					
 					<h2> Motor Design </h2>
 					<p> 
-						We went with these surprisingly cheap <a href = "https://emaxmodel.com/products/emax-gb4114-brushless-gimbal-motor-hollow-shaft-42kv-85t" target = "_blank" style = "color: white"> Emaxx 4114 gimbal motors</a> (while they were in stock) 
-						and were 8$ each. 
+						We went with these surprisingly cheap <a href = "https://emaxmodel.com/products/emax-gb4114-brushless-gimbal-motor-hollow-shaft-42kv-85t" target = "_blank" style = "color: white"> Emaxx 4114 gimbal motors</a> (while they were in stock). 
 					</p>
 					<p> 
-						The actual motor design has to be the best representation of the collaboration between me and Adin. We needed a housing to protect the motor controller, constrain the diametric magnet for the encoder, 
-						and provide suitable mounting points to use the motor in multiple instances in our robot arm.
+						The actual motor design has to be the best representation of the collaboration between me and Adin. We needed a housing to protect the motor controller, constrain the diametric magnet for the encoder, and provide suitable mounting points to use the motor in multiple instances in our robot arm.
 					</p>
 
 					<p> 
@@ -84,7 +82,7 @@
 					<h2> Design Prototypes </h2>
 					<h3> First Version </h3> 
 					<p> 
-						At first, I strived for pure simplicity. Attaching each motor directly to each joint of the arm. This looked fine in CAD but in real life, the LEAN from the sheer weight of each motor 
+						At first, I strived for pure simplicity. Attaching each motor directly to each joint of the arm. This looked fine in CAD but in real life, the <b>lean</b> from the sheer weight of each motor 
 						was unbearably bad. Not only that, but the massive rotational intertia caused many other problems like shaking and slow movement.  
 					</p>
 
@@ -104,12 +102,60 @@
 					</video>
 
 					<p> 
-						This version used fine pitched GT2 Belts, the same ones that 3D Printers use since I easily had those on hand. Unfortunately, it did not handle torque extremely well and the 3D 
-						printed pulleys were prone to constant stripping.
+						This version used fine pitched GT2 Belts, the same ones that 3D Printers use. Unfortunately, it did not handle torque extremely well and the 3D printed pulleys were prone to constant stripping. 
+					</p>
+					<p> 
+						Ontop of that, the method that I used to tension and join the ends of the belt together proved to interfere the linear rods that it had to pass through. 
 					</p>
 
+					<h3> Third Version </h3>
+					<p>
+						Current version use MCMaster's closed looped belts and have much larger teeth for more engagement between it and the pulleys. 
+					</p>
+
+					<img style = "height: 45vh" src = "images\SCARA Arm\Elbow Pulley (1).png">
+					
+					<h2> Elevator </h2>
+					<p> To reduce the load that the z-motor would have to face, a lead-screw design with three supporting linear rods were employed. </p>
+					<img style = "max-width:100%;" src = "images\SCARA Arm\elevatorupanddown.gif">
+					<p> Although a little slow, the top motor has had zero issues lifting the entire arm even with a heavy payload </p>
 					
 
+					<h2> Gripper </h2>
+					<p> Like the actual design of the SCARA Arm, the gripper went through many iterations. </p>
+					<h3> First Gripper Version</h3>
+					
+					<p>
+						First version was a 4-bar design where a MG995 servo was powering one side, and the other side was kept in sync by a set of gears. I realized that the main issue with this is that as the gripper is closing, it moves closer towards the ground which only complicates grabbing something.
+					</p>
+					<img style = "max-width:100%;" src = "images\SCARA Arm\servo4bar.gif">
+					<p>
+						The ideal design should simply move them closer together without moving downwards or upwards.
+					</p>
+
+					<h3> Second Version </h3>
+					<p>
+						Second version uses a cam mechanism on a set of steel M3 rails as a set of guides. Unfortunately they do not slide well and tend to seize and stop working. Plus servos are annoying, why not use the motors that we are already using? So one more redesign was needed.
+					</p>
+					<img style = "max-width:100%;" src = "images\SCARA Arm\linearrotatingcam.gif">
+
+					<h3> Third Version </h3>
+					<p> This new version was a drastic step up in many ways.</p>
+					<img style = "max-width:100%;" src = "images\SCARA Arm\currentgrabberversion.gif">
+
+					<h4> Sliding Mechanism </h4>
+					<p> Instead of sliding on metal rails with a bearing, the current version simply slides on plastic flanges (circled in red) that stick out. After applying some grease, these work really smoothly! </p>
+					<img style = "max-width:100%;" src = "images\SCARA Arm\slidingrails.png">
+
+					<h4> Rack and Pinion </h4>
+					<p> Instead of a CAM mechanism, this version uses a rack and pinion gear to apply an equal amount of force on the gripper regardless of it's position. This is ideal because naturally we pick up objects that vary in size.</p>
+					<img style = "max-width:100%;" src = "images\SCARA Arm\closeuprackandpinion.png">
+					<h4> Motor Design</h4>
+					<p> A smaller variant of our usual <a href = "https://emaxmodel.com/collections/gimbal-motor/products/emax-gb2808-brushless-gimbal-motor-hollow-shaft-70kv-100t" target = "_blank" style = "color: white"> motor</a>  was used in the grabber to reduce gripper weight. Originally, this motor was directly fixed to the pinion gear to drive the clamping arms. However, the motor had to exert so much energy to hold an object that it was heating up and melting the 3D Printed PLA.</p>
+					<p> Thus, a new motor housing was designed to incorporate a two stage 1:4 herringbone gear reduction</p>
+					<img style = "max-width:100%;" src = "images\SCARA Arm\gearreduction.gif">
+
+					
 				</div>
 
 				<div class = right-side> 

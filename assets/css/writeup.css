@@ -21,3 +21,8 @@
   text-align: center;
   font-size: 3vh;
 }
+
+p, li {
+  color: white;
+  font-weight: 300;
+}
